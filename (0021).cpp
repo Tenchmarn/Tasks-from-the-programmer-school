@@ -1,24 +1,16 @@
-﻿#include <iostream>
+#include <iostream>
+
 using namespace std;
-int main() {
-	int r1, r2, r3;
-	cin >> r1 >> r2 >> r3;
-	if ((r1 < r2) && (r1 < r3)) {
-		if (r2 < r3) {
-			cout << r3 - r1;
-		}
-		else {
-			cout << r2 - r1;
-		}
-	}
-	if ((r1 > r2) && (r1 > r3)) {
-		if (r2 > r3) {
-			cout << r1 - r3;
-		}
-		else {
-			cout << r1 - r2;
-		}
-	}
+
+int main()
+{
+
+	int a, b, c;
+	cin >> a >> b >> c;
+
+	cout << max(a, max(b, c)) - min(a, min(b, c));
 
 	return 0;
 }
+
+// MinGW GNU C++ 14.2.0
